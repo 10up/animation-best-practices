@@ -24,4 +24,4 @@ If you have questions about the material covered or have any suggestions for add
 
 ## Contributing
 
-Issues & PR's are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
+Issues & PRs are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
