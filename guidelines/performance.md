@@ -6,7 +6,7 @@ sidebar_label: Performance
 
 Writing performant motion and animation is critical in crafting high quality user experiences. Below are several strategies that will help enhance performance when using motion.
 
-For clean and reliable animation without jitters or stutters, maintain at least 60fps. To test fps with animations, use chrome devtools performance tab (green bar at its highest point is 60fps):
+For clean and reliable animation without jitters or stutters, maintain at least 60fps. To test FPS with animations, use chrome devtools performance tab (green bar at its highest point is 60fps):
 
 ![Google devtools animation FPS](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image13.png)
 *Google devtools animation FPS*
@@ -35,7 +35,7 @@ Avoid things like:
 
 ### will-change
 
-Using `will-change` alerts the browser what you plan to animate and allocates resources appropriately and can enhance fps and performance for a particular animation, but should be used with clear intent. When possible, do not use `will-change: auto` and instead use a specific value to the impending animation. Applying `will-change`, however,  to too many elements on a page will over utilize browser resources and negatively impact performance. Therefore, use sparingly and/or use scripts to toggle `will-change` on or off before and after animation change occurs. 
+Using `will-change` alerts the browser what you plan to animate and allocates resources appropriately and can enhance FPS and performance for a particular animation, but should be used with clear intent. When possible, do not use `will-change: auto` and instead use a specific value to the impending animation. Applying `will-change`, however,  to too many elements on a page will over utilize browser resources and negatively impact performance. Therefore, use sparingly and/or use scripts to toggle `will-change` on or off before and after animation change occurs. 
 
 -   <https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/>
 -   <https://developer.mozilla.org/en-US/docs/Web/CSS/will-change>
