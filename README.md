@@ -1,41 +1,27 @@
-# Website
+# 10up Animation Best Practices
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository houses the source code for the 10up Animation Best Practices website (TBD).
 
-### Installation
+The content of this site is grouped into three different sections: Examples, Resources, and Guides.
 
-```
-$ yarn
-```
+## Examples
 
-### Local Development
+The examples section is meant for multiple disciplines, ranging from sales and project management to design and engineering, to be able to view simple demonstrations of 10up's animation capabilities. Examples show generally how a type of animation might be implemented on a specific project by giving engineers code samples to follow. Designers and UX may use them as reference or as a source of inspiration. Examples may also be used to gauge potential level of effort. We may also use them to confirm with potential clients that a requested animation is within the ability of 10up.
 
-```
-$ yarn start
-```
+## Resources
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+The resources section has information for anyone wanting to learn more about the animation process in general, and will typically include links to third parties for educational purposes.
 
-### Build
+## Guides
 
-```
-$ yarn build
-```
+Guides are one off articles that go into depth on one particular topic.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+* * * * *
 
-### Deployment
+## Questions / Suggestions?
 
-Using SSH:
+If you have questions about the material covered or have any suggestions for additional topics please create a new Discussion in the discussions tab here in GitHub.
 
-```
-$ USE_SSH=true yarn deploy
-```
+## Contributing
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Issues & PR's are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
