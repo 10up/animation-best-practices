@@ -12,9 +12,9 @@ The examples section is meant for multiple disciplines, ranging from sales and p
 
 The resources section has information for anyone wanting to learn more about the animation process in general, and will typically include links to third parties for educational purposes.
 
-## Guides
+## Guidelines
 
-Guides are one off articles that go into depth on one particular topic.
+Guidelines are one off articles that go into depth on one particular topic.
 
 * * * * *
 
@@ -24,4 +24,4 @@ If you have questions about the material covered or have any suggestions for add
 
 ## Contributing
 
-Issues & PR's are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
+Issues & PRs are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
