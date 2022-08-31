@@ -17,7 +17,7 @@ Simple animation complexity is very low. It can be added, updated and removed fr
 -   CSS only motion and animation (using `transition`)
 -   No keyframes or complex motion chaining
 
-![Click Me Button](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image6.gif)
+![Click Me Button](../static/img/guidelines/complexity-simple-01.gif)
 *A simple transition on a button*
 
 ## Enhanced
@@ -30,7 +30,7 @@ Enhanced animations may include on or more of the following:
 -   Simple keyframe animations (using CSS `@keyframes` and `animation`, or JS [WAAPI](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API))
 -   Multiple simple animations on a single component
 
-![Card Example](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image2.gif)
+![Card Example](../static/img/guidelines/complexity-enhanced-01.gif)
 *An enhanced card example*
 
 ## Complex
@@ -53,16 +53,16 @@ Some libraries might include:
 -   [Anime.js](https://animejs.com/)
 -   [GreenSock / GSAP](https://greensock.com/)
 
-![FireWatch Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image7.gif)
+![FireWatch Website](../static/img/guidelines/complexity-complex-01.gif)
 *Parallax scrolling: <https://www.firewatchgame.com/>*
 
-![Google Pixel Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image1.gif)
+![Google Pixel Website](../static/img/guidelines/complexity-complex-02.gif)
 *Page storytelling with parallax: <https://store.google.com/product/pixel_3a>*
 
-![Humane by Design Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image4.gif)
+![Humane by Design Website](../static/img/guidelines/complexity-complex-03.gif)
 *Page transitions / scroll to motion: <https://humanebydesign.com/>*
 
-![Infinium Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image9.gif)
+![Infinium Website](../static/img/guidelines/complexity-complex-04.gif)
 *Page transitions: <https://infinum.com/>*
 
 ## Extreme
@@ -74,8 +74,8 @@ Extreme motion animation complexity goes above and beyond using CSS and JavaScri
 - [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 - [A-Frame](https://aframe.io/)
 
-![Active Theory Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image3.gif)
+![Active Theory Website](../static/img/guidelines/complexity-extreme-01.gif)
 *Extreme example: <https://activetheory.net/>*
 
-![Waaark Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/advanced_wrk-2.gif)
+![Waaark Website](../static/img/guidelines/complexity-extreme-02.gif)
 *Extreme example: <https://waaark.com/>*
