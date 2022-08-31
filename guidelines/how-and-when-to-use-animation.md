@@ -6,7 +6,7 @@ sidebar_label: How & when to use animation
 
 Animation type defines the behavior, intent, interaction, and purpose of the animation.
 
-## UI/Interactive Elements
+## UI / Interactive Elements
 
 Interactive UI elements lend logically to explicit motion enhancement. These animation events occur when the component is interacted with (i.e. a button is clicked, focused or hovered). 
 
@@ -16,10 +16,10 @@ Additionally, it is important to try and understand and utilize mental models fr
 
 Imagine these two examples without the transition state and how jarring it would be between frames:
 
-![Iphone Photos Library](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image8.gif)
+![Iphone Photos Library](../static/img/guidelines/how-when-ui-01.gif)
 *Context*
 
-![Menu Reveal](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image14.gif)
+![Menu Reveal](../static/img/guidelines/how-when-ui-02.gif)
 *Interface*
 
 Therefore, when enhancing UI/Interactive Elements, consider the enhancement you are providing to the user experience through the lense of expected mental models and meaningful interactions.
@@ -47,19 +47,19 @@ Examples of motion to delight include:
 -   Component loading animations (i.e. staggered reveal in a grid of cards)
 -   Motion graphics (logos, svgs)
 
-![EAB Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/complex_scroll_storytelling.gif)
+![EAB Website](../static/img/guidelines/how-when-delight-01.gif)
 *To delight -- motion graphics: <https://eab.com/>*
 
 ## Storytelling
 
 Animation for storytelling is a finely crafted and designed experience that provides a visual journey for the user. This journey can be in place (i.e. cartoon) or may involve scrolling to reveal and tell the story. 
 
-![Google Pixel Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image1.gif)
+![Google Pixel Website](../static/img/guidelines/how-when-storytelling-01.gif)
 *Page storytelling with parallax: <https://store.google.com/product/pixel_3a>*
 
 ## Immersive Experiences
 
 Immersive experiences are beyond webpage components. These are experiences that feel they take over the page and are completely immersive.
 
-![Active Theory Website](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image3.gif)
+![Active Theory Website](../static/img/guidelines/how-when-immersive-01.gif)
 *Immersive example: <https://activetheory.net/>*
