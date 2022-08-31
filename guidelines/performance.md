@@ -6,10 +6,7 @@ sidebar_label: Performance
 
 Writing performant motion and animation is critical in crafting high quality user experiences. Below are several strategies that will help enhance performance when using motion.
 
-For clean and reliable animation without jitters or stutters, maintain at least 60fps. To test FPS with animations, use chrome devtools performance tab (green bar at its highest point is 60fps):
-
-![Google devtools animation FPS](https://internal.10up.com/docs/wp-content/uploads/sites/8/2020/04/image13.png)
-*Google devtools animation FPS*
+For clean and reliable animation without jitters or stutters, maintain at least 60fps. To test FPS with animations, use chrome devtools performance tab (green bar at its highest point is 60fps).
 
 Keep in mind that different devices may have different framerates for their displays. Variable refresh, Apple's ProMotion, and high refresh rate displays can all play a factor in what framerate the browser actually animates at.
 
