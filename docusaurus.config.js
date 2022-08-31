@@ -60,8 +60,8 @@ const config = {
             type: 'doc',
             docId: 'index',
             position: 'right',
-            label: 'Guides',
-            docsPluginId: 'guides'
+            label: 'Guidelines',
+            docsPluginId: 'guidelines'
           },
           {
             type: 'doc',
@@ -103,9 +103,9 @@ const config = {
     [
 			'@docusaurus/plugin-content-docs',
 			{
-				id: 'guides',
-				path: 'guides',
-				routeBasePath: 'guides',
+				id: 'guidelines',
+				path: 'guidelines',
+				routeBasePath: 'guidelines',
 				sidebarPath: require.resolve('./sidebars.js'),
 				sidebarCollapsed: false,
 			},
