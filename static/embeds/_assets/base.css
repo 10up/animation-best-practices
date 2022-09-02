@@ -46,6 +46,7 @@
 }
 
 body {
+    background-color: var(--color-brand-white);
     accent-color: var(--color-brand-primary-600);
     color: var(--color-brand-text-body);
     font-family: var(--font-brand-family-sans-serif);

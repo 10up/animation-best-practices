@@ -66,7 +66,7 @@ Not all projects can or should use a library or framework for various reasons (b
 
 #### File and folder structure
 
-All example embeds should be placed in the [embed directory](https://github.com/10up/animation-best-practices/embeds/) of this repo. All example markdown should be placed in the [examples directory](https://github.com/10up/animation-best-practices/examples/) of this repo. The latter is the page that the majority of users will visit first.
+All example embeds should be placed in the [embed directory](https://github.com/10up/animation-best-practices/static/embeds/) of this repo. All example markdown should be placed in the [examples directory](https://github.com/10up/animation-best-practices/examples/) of this repo. The latter is the page that the majority of users will visit first.
 
 When creating your example, be sure to organize it into an appropriate directory. For example, any example that involves animating a vector or illustration should be in the "illustrations" category folder. Typically, the folder structure for an embed would look something like: `embeds/{category}/{sub-category}/{name}/index-{type}.html` where the `type` could be something like CSS, WAAPI, React, GSAP, etc.
 
@@ -82,11 +82,11 @@ The examples are created to use `iframe` in the Markdown to display. Do _not_ in
 - Maintain visual consistency
 - Allows engineers who are less familiar in working with different animations an easy way to examine and potentially recreate or port an animation to a project
 
-The [sample embed](https://github.com/10up/animation-best-practices/embeds/_sample) should be the starting point for all examples. Do _not_ modify it. You're free to add additional libraries to your example (if required) from [cdnjs](https://cdnjs.com/) or as a direct dependency (within the example's folder).
+The [sample embed](https://github.com/10up/animation-best-practices/static/embeds/_sample) should be the starting point for all examples. Do _not_ modify it. You're free to add additional libraries to your example (if required) from [cdnjs](https://cdnjs.com/) or as a direct dependency (within the example's folder).
 
 You can add the iframe to the Markdown file for the example by using something like:
 
 ```html
-<iframe src="https://github.com/10up/animation-best-practices/embeds/{path-to-example}/example.html">
+<iframe src="/embeds/{path-to-example}/example.html">
 ```
 
