@@ -1,0 +1,60 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+:root {
+    --color-brand-primary-50: #FFE3E5;
+    --color-brand-primary-100: #F9D0D2;
+    --color-brand-primary-200: #E79999;
+    --color-brand-primary-300: #DB7379;
+    --color-brand-primary-400: #E76068;
+    --color-brand-primary-500: #F54B55;
+    --color-brand-primary-600: #E31E41;
+    --color-brand-primary-700: #CF2035;
+    --color-brand-primary-800: #B1172A;
+    --color-brand-primary-900: #A30811;
+    --color-brand-secondary-50: #E3FAF8;
+
+    --color-brand-secondary-100: #D1F2F0;
+    --color-brand-secondary-200: #BBEAE8;
+    --color-brand-secondary-300: #ADE2E0;
+    --color-brand-secondary-400: #9BDCDA;
+    --color-brand-secondary-500: #7ED5D4;
+    --color-brand-secondary-600: #64C7C7;
+    --color-brand-secondary-700: #28B4B1;
+    --color-brand-secondary-800: #2A9F9F;
+    --color-brand-secondary-900: #039591;
+
+    --color-brand-grayscale-50: #F8F9FA;
+    --color-brand-grayscale-100: #F1F3F4;
+    --color-brand-grayscale-200: #DFE2E3;
+    --color-brand-grayscale-300: #D5D7D8;
+    --color-brand-grayscale-400: #B9BBBD;
+    --color-brand-grayscale-500: #9AA0A6;
+    --color-brand-grayscale-600: #80868B;
+    --color-brand-grayscale-700: #5F6368;
+    --color-brand-grayscale-800: #3C4043;
+    --color-brand-grayscale-900: #202124;
+
+    --color-brand-white: #fff;
+    --color-brand-black: var(--color-brand-grayscale-900);
+    --color-brand-primary: var(--color-brand-primary-600);
+    --color-brand-secondary: var(--color-brand-secondary-500);
+    --color-brand-text-body: var(--color-brand-grayscale-700);
+
+    --font-brand-family-serif: "Berlingske Serif", "Playfair Display", serif;
+    --font-brand-family-sans-serif: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-brand-family-monospace: "IBM Plex Mono", monospace;
+}
+
+body {
+    accent-color: var(--color-brand-primary-600);
+    color: var(--color-brand-text-body);
+    font-family: var(--font-brand-family-sans-serif);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-brand-family-serif);
+}
+
+h4, h5, h6 {
+    font-family: var(--font-brand-family-sans-serif);
+}
