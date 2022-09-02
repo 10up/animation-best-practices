@@ -24,4 +24,4 @@ If you have questions about the material covered or have any suggestions for add
 
 ## Contributing
 
-Issues & PRs are always welcome. To build this site locally all you need to do is run `npm install` and `npm start`. If making an example for reference for the team, be sure to follow the guidelines.
+Please read the [docs on contributing](https://github.com/10up/animation-best-practices/CONTRIBUTING.md) in this repository.
