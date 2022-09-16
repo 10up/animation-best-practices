@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkanimation=self.webpackChunkanimation||[]).push([[4507],{6062:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"resources"}')}}]);
