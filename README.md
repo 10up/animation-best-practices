@@ -1,6 +1,6 @@
 # 10up Animation Best Practices
 
-This repository houses the source code for the 10up Animation Best Practices website (TBD).
+This repository houses the source code for the [10up Animation Best Practices website](https://10up.github.io/animation-best-practices).
 
 The content of this site is grouped into three different sections: Examples, Resources, and Guides.
 
