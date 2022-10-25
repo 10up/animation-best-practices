@@ -20,7 +20,7 @@ export default function LayoutWrapper(props) {
 
 function VerifyLogin(props) {
 	const {
-		siteConfig: { url, customFields: { googleSSOClientId, tenupSSOProxy } },
+		siteConfig: { customFields: { homeUrl, googleSSOClientId, tenupSSOProxy } },
 	} = useDocusaurusContext();
 
 	const authCookie = getCookie('10up-sso-login');
@@ -52,7 +52,7 @@ function VerifyLogin(props) {
 	}, [authCookie, tenupSSOProxy, setIsAuthenticated]);
 
 	function redirectToLogin() {
-		const returnUrl = new URL(`${url}/login`);
+		const returnUrl = new URL(`${homeUrl}login`);
 		returnUrl.searchParams.set('return_to', window.location.href);
 
 		const ssoUrl = new URL(tenupSSOProxy);

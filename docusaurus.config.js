@@ -16,6 +16,7 @@ const config = {
 
   // SSO
   customFields: {
+    homeUrl: 'https://10up.github.io/animation-best-practices/',
     tenupSSOProxy: 'https://ssoproxy.10uplabs.com/wp-login.php',
     googleSSOClientId: '633588772255-vbpba3ca5254j0n6d9pf3a552pcbkr8q',
   },
