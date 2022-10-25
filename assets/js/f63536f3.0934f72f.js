@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkanimation=self.webpackChunkanimation||[]).push([[9334],{5866:(n,u,a)=>{a.r(u),a.d(u,{default:()=>e});var l=a(8292),t=a(2389);function e(){return(0,t.Z)()?((0,l.kT)("10up-sso-login"),window.location.replace("https://10up.com"),null):null}}}]);
