@@ -11,8 +11,8 @@
     --color-brand-primary-700: #CF2035;
     --color-brand-primary-800: #B1172A;
     --color-brand-primary-900: #A30811;
+    
     --color-brand-secondary-50: #E3FAF8;
-
     --color-brand-secondary-100: #D1F2F0;
     --color-brand-secondary-200: #BBEAE8;
     --color-brand-secondary-300: #ADE2E0;
@@ -45,11 +45,21 @@
     --font-brand-family-monospace: "IBM Plex Mono", monospace;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: 2px dotted currentColor;
+    outline-offset: -0.25em;
+}
+
 body {
-    background-color: var(--color-brand-white);
     accent-color: var(--color-brand-primary-600);
+    background-color: var(--color-brand-white);
     color: var(--color-brand-text-body);
     font-family: var(--font-brand-family-sans-serif);
+    line-height: 1.5;
 }
 
 h1, h2, h3 {
