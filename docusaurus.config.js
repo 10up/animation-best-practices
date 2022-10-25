@@ -14,6 +14,12 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
+  // SSO
+  customFields: {
+    tenupSSOProxy: 'https://ssoproxy.10uplabs.com/wp-login.php',
+    googleSSOClientId: '633588772255-vbpba3ca5254j0n6d9pf3a552pcbkr8q',
+  },
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: '10up', // Usually your GitHub org/user name.
@@ -70,6 +76,11 @@ const config = {
             label: 'Resources',
             docsPluginId: 'resources'
           },
+          {
+            label: 'Logout 🔓',
+            position: 'right',
+            to: 'logout',
+          }
         ],
       },
       footer: {
