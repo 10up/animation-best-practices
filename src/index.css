@@ -1,0 +1,7 @@
+.test {
+    color: 'blue';
+
+    & .foo {
+        color: 'red';
+    }
+}
