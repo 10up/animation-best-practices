@@ -30,5 +30,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@10up/component-accordion": "^2.0.1",
+    "@swup/a11y-plugin": "^2.1.0",
+    "@swup/body-class-plugin": "^1.0.2",
+    "@swup/js-plugin": "^1.0.5",
+    "gsap": "^3.11.4",
+    "normalize.css": "^8.0.1",
+    "swup": "^3.0.4"
   }
 }
