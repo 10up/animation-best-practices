@@ -3,20 +3,21 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "10up-toolkit build --wp=false --format=none",
-    "dev": "npm run build -- --watch --dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run watch",
+    "watch": "10up-toolkit watch --port=5000 --hot",
+    "build": "10up-toolkit build",
+    "format-js": "10up-toolkit format-js",
+    "lint-js": "10up-toolkit lint-js",
+    "lint-style": "10up-toolkit lint-style",
+    "test": "10up-toolkit test-unit-jest",
+    "clean-dist": "rm -rf ./dist"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   },
   "devDependencies": {
     "10up-toolkit": "^5.0.0",
-    "html-loader": "^4.2.0",
-    "html-webpack-plugin": "^5.5.0"
-  },
-  "10up-toolkit": {
-    "libraryName": "TestExample",
-    "entry": {
-      "index": "./src/index.html"
-    }
+    "html-bundler-webpack-plugin": "^1.2.0"
   },
   "browserslist": {
     "production": [
@@ -29,6 +30,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "license": "MIT"
+  }
 }
