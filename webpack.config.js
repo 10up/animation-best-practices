@@ -4,6 +4,7 @@ const toolkitConfig = require('10up-toolkit/config/webpack.config.js');
 const { hasPostCSSConfig, fromConfigRoot } = require('10up-toolkit/utils');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const { sync: glob } = require('fast-glob');
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 // Get the source HTML files.
 const examples = glob('./src/**/*.html', { objectMode: true });
@@ -21,6 +22,7 @@ examples.forEach(({path}) => {
 const config = {
     ...toolkitConfig,
     output: {
+        clean: true,
         path: path.join(__dirname, 'dist/'),
         publicPath: '/',
     },
@@ -66,6 +68,19 @@ const config = {
     plugins: [
         new HtmlBundlerPlugin({
             entry: entries
+        }),
+        new RemovePlugin({
+            after: {
+                test: [
+                    {
+                        folder: 'dist',
+                        method: (absoluteItemPath) => {
+                            return new RegExp(/\.(js|css)$/, 'm').test(absoluteItemPath);
+                        },
+                        recursive: true
+                    }
+                ]
+            }
         })
     ],
 }
