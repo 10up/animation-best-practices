@@ -1,3 +1,7 @@
+body {
+	background-image: linear-gradient(to bottom, #fff, #ccc);
+}
+
 img {
 	height: auto;
 	max-width: 100%;
