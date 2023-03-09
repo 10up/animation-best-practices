@@ -18,6 +18,9 @@ examples.forEach(({path}) => {
     entries[key] = value;
 })
 
+// Use the alias instead of a relative path like '../../../../assets/css/'
+toolkitConfig.resolve.alias['@styles'] = path.join(__dirname, 'src/assets/css/')
+
 const config = {
     ...toolkitConfig,
     output: {
@@ -29,10 +32,6 @@ const config = {
         ...toolkitConfig.module,
         // Many of toolkits rules will collide and cause issues with this loader, so we're omitting using them here.
         rules: [
-            {
-                test: /\.html$/,
-                loader: HtmlBundlerPlugin.loader,
-            },
             {
                 test: /\.css$/,
                 use: [
@@ -54,19 +53,27 @@ const config = {
                 ],
             },
             {
-				test: /\.svg$/,
-				use: ['@svgr/webpack', 'url-loader'],
-			},
+                test: /\.svg$/,
+                // No need to use the deprecated 'url-loader'.
+                // The HtmlBundlerPlugin automaticaly transforms inlined SVG into utf8 data-URI in CSS.
+                use: ['@svgr/webpack'],
+            },
             {
-				test: /\.(jpg|jpeg|png|giff|webp)(\?v=\d+\.\d+\.\d+)?$/,
-				type: 'asset/inline',
-			},
+                test: /\.(jpg|jpeg|png|giff|webp)(\?v=\d+\.\d+\.\d+)?$/,
+                type: 'asset/inline',
+            },
         ],
     },
     // We should only need this for a plugin to process all our files due to how it handles assets.
     plugins: [
         new HtmlBundlerPlugin({
-            entry: entries
+            entry: entries,
+            js: {
+                inline: true, // globally inline all extracted JS
+            },
+            css: {
+                inline: true, // globally inline all extracted CSS
+            }
         }),
     ],
 }
