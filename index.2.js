@@ -1,1 +1,0 @@
-document.querySelectorAll(".logo, .ports, .outline").forEach((e=>{e.animate([{strokeDashoffset:1},{strokeDashoffset:0}],{duration:5e3,easing:"ease",iterations:1/0,direction:"alternate"})}));

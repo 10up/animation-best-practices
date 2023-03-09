@@ -1,1 +1,0 @@
-document.querySelector(".image-container").animate([{maskPosition:"0% 0%"},{maskPosition:"100% 0%"}],{duration:2e3,easing:"steps(29)",iterations:1/0,direction:"alternate"});
