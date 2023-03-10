@@ -1,0 +1,43 @@
+{
+  "name": "animation-best-practices",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "10up-toolkit watch --port=5000 --hot",
+    "build": "10up-toolkit build",
+    "format-js": "10up-toolkit format-js",
+    "lint-js": "10up-toolkit lint-js",
+    "lint-style": "10up-toolkit lint-style",
+    "test": "10up-toolkit test-unit-jest",
+    "clean-dist": "rm -rf ./dist"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "10up-toolkit": "^5.0.0",
+    "html-bundler-webpack-plugin": "^1.6.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@10up/component-accordion": "^2.0.1",
+    "@swup/a11y-plugin": "^2.1.0",
+    "@swup/body-class-plugin": "^1.0.2",
+    "@swup/js-plugin": "^1.0.5",
+    "gsap": "^3.11.4",
+    "normalize.css": "^8.0.1",
+    "swup": "^3.0.4"
+  }
+}
