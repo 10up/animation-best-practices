@@ -38,6 +38,7 @@
     "@swup/js-plugin": "^1.0.5",
     "gsap": "^3.11.4",
     "normalize.css": "^8.0.1",
+    "splitting": "^1.0.6",
     "swup": "^3.0.4"
   }
 }
