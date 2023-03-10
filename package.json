@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "10up-toolkit": "^5.0.0",
-    "html-bundler-webpack-plugin": "^1.6.1"
+    "html-bundler-webpack-plugin": "^1.6.2"
   },
   "browserslist": {
     "production": [
