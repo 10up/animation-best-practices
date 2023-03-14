@@ -17,7 +17,7 @@ const handleButtonOnClick = () => {
     // Open
     const tl = gsap.timeline()
 
-    tl.fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, xPercent: 0, duration: 0.3, ease: 'power1.out' }, 'start')
+    tl.to(menu, { autoAlpha: 1, xPercent: 0, duration: 0.3, ease: 'power1.out' }, 'start')
     tl.to('.navigation--primary li', { opacity: 1, x: '0em', duration: 0.3, ease: 'power1.inOut', stagger: 0.1 }, 'start')
     tl.to('.navigation--secondary li', { opacity: 1, x: '0em', duration: 0.3, ease: 'power1.inOut' })
   }
@@ -30,6 +30,7 @@ const handleButtonOnClick = () => {
 }
 
 const setup = () => {
+  gsap.set(menu, { autoAlpha: 0, xPercent: -100 })
   menu.setAttribute('data-open', false)
   menu.setAttribute('aria-hidden', true)
 
