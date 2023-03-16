@@ -15,7 +15,6 @@
 	animation-name: show;
 	animation-duration: var(--duration);
 	animation-fill-mode: both;
-	animation-iteration-count: infinite;
 	animation-delay: calc(var(--word-index) * var(--duration) / var(--word-total));
 }
 
@@ -24,7 +23,6 @@
 	animation-delay: calc(var(--char-index) * var(--duration) / var(--char-total));
 	animation-duration: var(--duration);
 	animation-fill-mode: both;
-	animation-iteration-count: infinite;
 }
 
 [data-splitting="lines"] .word {
@@ -32,7 +30,6 @@
 	animation-delay: calc(var(--line-index) * var(--duration) / var(--line-total));
 	animation-duration: var(--duration);
 	animation-fill-mode: both;
-	animation-iteration-count: infinite;
 }
 
 @keyframes show {

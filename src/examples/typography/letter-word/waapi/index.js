@@ -12,7 +12,6 @@ words.forEach((element, index) => {
         duration, 
         delay: index *  duration / words.length,
         fill: 'both',
-        iterations: Infinity,
         direction: 'alternate'
     })
 })
@@ -26,7 +25,6 @@ chars.forEach((element, index) => {
         duration, 
         delay: index *  duration / chars.length,
         fill: 'both',
-        iterations: Infinity,
         direction: 'alternate'
     })
 })
@@ -42,7 +40,6 @@ lines.forEach((element) => {
         duration, 
         delay: index *  duration / lines.length,
         fill: 'both',
-        iterations: Infinity,
         direction: 'alternate'
     })
 })
