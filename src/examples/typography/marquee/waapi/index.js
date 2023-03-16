@@ -5,7 +5,7 @@ marqueeContents.forEach(marqueeContent => {
         { transform: 'translateX(0)' },
         { transform: 'translateX(calc(-100% - var(--gap)))' }
     ], {
-        duration: 1000 * 10, // 10 seconds
+        duration: 1000 * 60, // 60 seconds
         easing: 'linear',
         iterations: Infinity,
     })

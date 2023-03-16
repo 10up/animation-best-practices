@@ -39,12 +39,14 @@ figure {
 	border: 2px solid var(--color-brand-grayscale-400);
 	border-radius: 0.25rem;
 	display: flex;
+	font-family: var(--font-brand-family-serif);
+	font-size: 5rem;
 	gap: var(--gap);
 	overflow: hidden;
 }
 
 .marquee__content {
-	animation: scroll 10s linear infinite;
+	animation: scroll 60s linear infinite;
 	display: flex;
 	flex-shrink: 0;
 	gap: var(--gap);
