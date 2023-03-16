@@ -34,7 +34,7 @@ figure {
 }
 
 .marquee {
-	--gap: 1rem;
+	--gap: 1em;
 
 	border: 2px solid var(--color-brand-grayscale-400);
 	border-radius: 0.25rem;
