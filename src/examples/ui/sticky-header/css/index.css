@@ -1,0 +1,167 @@
+@import "@10up/component-accordion";
+
+:root {
+	--header-height: 80px; /** This will be updated on resize by JS */
+	--sticky-header-hide-offset: 6px;
+	--scroll-margin-top-offset: calc(1rem + var(--sticky-header-hide-offset));
+
+	@media (max-width: 343px) {
+		--header-height: 120px; /** Manually match .site-header height */
+	}
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+}
+
+:first-child {
+	margin-top: 0;
+}
+
+:last-child {
+	margin-bottom: 0;
+}
+
+:target {
+	scroll-margin-top: 1rem;
+}
+
+.container {
+	padding: 1rem;
+
+	& > * {
+		width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+	}
+}
+
+.site {
+	display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.site-header {
+	background-color: #eee;
+	box-shadow: 0 0 0 1px #ddd;
+	flex-shrink: 0;
+	transition: transform 0.4s ease-in-out;
+}
+
+.site-header--sticky {
+	position: sticky;
+	top: 0;
+	z-index: 4;
+	transform: translateY(0);
+
+	& + .site-main {
+
+		& :target {
+			scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
+		}
+	}
+}
+
+.site-header--hide {
+	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-offset))));
+
+	& + .site-main {
+
+		& :target {
+			scroll-margin-top: var(--scroll-margin-top-offset);
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:focus-within {
+		transform: translateY(0);
+
+		& + .site-main {
+
+			& :target {
+				scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
+			}
+		}
+	}
+}
+
+.site-header__inner {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: space-between;
+}
+
+.header-logo {
+	margin: 0;
+}
+
+.header-menu {
+
+	& h1 {
+		display: none;
+	}
+
+	& ul {
+		list-style: none;
+		display: flex;
+		gap: 1em;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.site-main {
+	flex-grow: 1;
+
+	& > .container {
+		padding-bottom: 2rem;
+		padding-top: 2rem;
+	}
+}
+
+.site-footer {
+	background-color: #eee;
+	flex-shrink: 0;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+}
+
+.copyright {
+	margin-bottom: 0;
+}
+
+.footer-back-to-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 1rem;
+
+	& > a {
+		background-color: #fff;
+		border: 1px solid;
+		font-size: 14px;
+		padding: 1em;
+	}
+}
+
+.hero {
+	background-color: #ddd;
+	margin: -2rem -1rem 2rem;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+	width: calc(100% + 1rem * 2);
+	max-width: none;
+}
