@@ -48,8 +48,8 @@
 }
 
 :focus {
-	outline: 2px dotted currentColor;
-	outline-offset: -0.25em;
+	position: relative;
+	z-index: 4;
 }
 
 body {
