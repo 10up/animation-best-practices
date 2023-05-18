@@ -17,6 +17,17 @@ body {
 
 html {
 	scroll-behavior: smooth;
+
+	&::before {
+		background-image: linear-gradient(to bottom, #eee 0% 50%, #333 50%);  /** Match .site-header background-color and .site-footer background-color */
+		background-repeat: no-repeat;
+		background-size: 100%;
+		content: "";
+		height: 100%;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
 }
 
 body {
@@ -47,14 +58,17 @@ body {
 }
 
 .site {
+	background-color: #fff;
 	display: flex;
     flex-direction: column;
     min-height: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .site-header {
 	background-color: #eee;
-	box-shadow: 0 0 0 1px #ddd;
+	box-shadow: 0 1px #ddd;
 	flex-shrink: 0;
 	transition: transform 0.4s ease-in-out;
 }
@@ -134,7 +148,8 @@ body {
 }
 
 .site-footer {
-	background-color: #eee;
+	background-color: #333;
+	color: #fff;
 	flex-shrink: 0;
 	padding-bottom: 2rem;
 	padding-top: 2rem;
