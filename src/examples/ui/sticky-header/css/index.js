@@ -103,7 +103,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		let scrollDirectionCurrent;
 
 		/** Update style property. */
-		setRootStyleProperty('--header-height', headerHeight);
+		function setHeaderHeight() {
+			headerHeight = getOffsetHeight(header);
+			scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
+			setRootStyleProperty('--header-height', headerHeight);
+		}
+
+		setHeaderHeight();
+
+		/** Resize, recalculate header height and scroll position threshold. */
+		window.addEventListener('resize', setHeaderHeight);
 
 		/** Hide sticky header by adding a modifier class. */
 		function hideStickyHeader() {
@@ -114,12 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		function showStickyHeader() {
 			header.classList.remove('site-header--hide');
 		}
-
-		/** Resize, recalculate header height and scroll position threshold. */
-		window.addEventListener('resize', throttle(() => {
-			headerHeight = getOffsetHeight(header);
-			scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
-		}, 100));
 
 		/** Wait to initialize hiding behavior. (For local links on initial load.) */
 		setTimeout(() => {
