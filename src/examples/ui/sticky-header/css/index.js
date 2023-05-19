@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 
 			/** Trigger sticky header hide behavior when clicking .site-content hash links. */
-			const contentHashLinks = document.querySelectorAll('.site-content a[href^="#"]');
-			contentHashLinks.forEach(element => {
+			const hashLinks = document.querySelectorAll('a[href^="#"]');
+			hashLinks.forEach(element => {
 				element.addEventListener('click', (event) => {
 					const target = document.querySelector(event.target.hash);
 
