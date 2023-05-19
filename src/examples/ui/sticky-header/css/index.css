@@ -124,7 +124,7 @@ body {
 	z-index: 4;
 	transform: translateY(0);
 
-	& + .site-main {
+	& + .site-content {
 
 		& :target {
 			scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
@@ -136,7 +136,7 @@ body {
 	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-offset))));
 	transition: transform 0.4s ease-in-out;
 
-	& + .site-main {
+	& + .site-content {
 
 		& :target {
 			scroll-margin-top: var(--scroll-margin-top-offset);
@@ -148,7 +148,7 @@ body {
 	&:focus-within {
 		transform: translateY(0);
 
-		& + .site-main {
+		& + .site-content {
 
 			& :target {
 				scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
@@ -184,7 +184,7 @@ body {
 	}
 }
 
-.site-main {
+.site-content {
 	flex-grow: 1;
 
 	& > .container {
