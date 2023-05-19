@@ -76,7 +76,7 @@ body {
 	background-color: #eee;
 	box-shadow: 0 1px #ddd;
 	flex-shrink: 0;
-	transition: transform 0.4s ease-in-out;
+	transition: transform 0.2s ease-in-out;
 }
 
 .site-header--sticky {
@@ -95,6 +95,7 @@ body {
 
 .site-header--hide {
 	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-offset))));
+	transition: transform 0.4s ease-in-out;
 
 	& + .site-main {
 
