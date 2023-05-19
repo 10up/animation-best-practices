@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	let headerHeight = getOffsetHeight(header);
 	let scrollPosition = 0;
 	let scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
-	let scrollDistance = 0;
-	let scrollDistanceAbs = 0;
+	let scrollDistance;
+	let scrollDistanceAbs;
 	let scrollDistanceThreshold = 24;
-	let scrollHideTimeout = 0;
+	let scrollHideTimeout = 2000;
 	let scrollDirection;
-	let scrollDirectionCurrent = 0;
+	let scrollDirectionCurrent;
 
 	/** Update style property. */
 	setRootStyleProperty('--header-height', headerHeight);
