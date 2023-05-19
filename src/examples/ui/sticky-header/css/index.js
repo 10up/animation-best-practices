@@ -91,13 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
+		const initialHide = false;
+		let behaviorTimeout = 2000;
 		let headerHeight = getOffsetHeight(header);
 		let scrollPosition = 0;
 		let scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
 		let scrollDistance;
 		let scrollDistanceAbs;
 		let scrollDistanceThreshold = 24;
-		let scrollHideTimeout = 2000;
 		let scrollDirection;
 		let scrollDirectionCurrent;
 
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		setTimeout(() => {
 
 			/** Have we scrolled past the scroll position threshold? Hide the sticky header. */
-			if (window.pageYOffset > scrollPositionThreshold) {
+			if (initialHide && window.pageYOffset > scrollPositionThreshold) {
 				hideStickyHeader();
 			}
 
@@ -174,9 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				/** Update scroll position. */
 				scrollPosition = window.pageYOffset;
-
 			}, 200));
 
-		}, scrollHideTimeout);
+		}, behaviorTimeout);
 	})();
 });
