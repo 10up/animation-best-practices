@@ -116,12 +116,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		window.addEventListener('resize', setHeaderHeight);
 
 		/** Hide sticky header by adding a modifier class. */
-		function hideStickyHeader() {
-			header.classList.add('site-header--hide');
+		function hideStickyHeader(log = '') {
+			if (log) console.log('hide', log);
+
+			if (header.matches(':hover')) {
+				/** Reset scroll direction for next update. */
+				scrollDirectionCurrent = 0;
+			} else {
+				header.classList.add('site-header--hide');
+			}
 		}
 
 		/** Show sticky header by removing a modifier class. */
-		function showStickyHeader() {
+		function showStickyHeader(log = '') {
+			if (log) console.log('show', log);
+
 			header.classList.remove('site-header--hide');
 		}
 
@@ -137,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				const target = document.querySelector(event.target.hash);
 
 				/** Is target position below the scroll position threshold? Hide the sticky header. */
-				if (target.offsetTop > scrollPositionThreshold) {
+				if (target.offsetTop > scrollPositionThreshold && target.offsetTop > window.pageYOffset) {
 					hideStickyHeader();
 				}
 
@@ -193,6 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			/** Update scroll position. */
 			scrollPosition = window.pageYOffset;
-		}, 200));
+		}, 100));
 	})();
 });
