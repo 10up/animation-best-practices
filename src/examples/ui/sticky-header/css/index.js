@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		/** Wait to initialize hiding behavior. (For local links on initial load.) */
 		setTimeout(() => {
 
-			/** Have we scrolled past the scroll position threshold? Hide the sticky header. */
+			/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
 			if (initialHide && window.pageYOffset > scrollPositionThreshold) {
 				hideStickyHeader();
 			}
@@ -133,8 +133,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			const contentHashLinks = document.querySelectorAll('.site-content a[href^="#"]');
 			contentHashLinks.forEach(element => {
 				element.addEventListener('click', (event) => {
-					if (event.target.offsetTop > scrollPositionThreshold) {
+					const target = document.querySelector(event.target.hash);
+
+					/** Is target position below the scroll position threshold? Hide the sticky header. */
+					if (target.offsetTop > scrollPositionThreshold) {
 						hideStickyHeader();
+					}
+
+					/** Is target position above the current scroll position? Show the sticky header. */
+					if (target.offsetTop < window.pageYOffset) {
+						showStickyHeader();
 					}
 				})
 			});
@@ -143,11 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.addEventListener('scroll', throttle(() => {
 				scrollDistance = window.pageYOffset - scrollPosition;
 
-				/** Have we scrolled past the scroll position threshold? Hide the sticky header. */
+				/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
 				if (window.pageYOffset > scrollPositionThreshold) {
 					scrollDistanceAbs = Math.abs(scrollDistance);
 
-					/** Have we scrolled past the scroll distance threshold? Hide or show the header. */
+					/** Have we scrolled below the scroll distance threshold? Hide or show the header. */
 					if (scrollDistanceAbs > scrollDistanceThreshold) {
 						scrollDirection = Math.sign(scrollDistance);
 
