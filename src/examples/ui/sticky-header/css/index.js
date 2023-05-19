@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						}
 					}
 				}
-			} else{
+			} else {
 				/** Are we at the top of the page? Show the sticky header. */
 				showStickyHeader();
 			}
