@@ -1,12 +1,12 @@
 @import "@10up/component-accordion";
 
 :root {
-	--header-height: 80px; /** This will be updated on resize by JS */
+	--header-height: 80px; /** Match .site-header-height. Will be updated via JS */
 	--sticky-header-hide-offset: 6px;
 	--scroll-margin-top-offset: calc(1rem + var(--sticky-header-hide-offset));
 
 	@media (max-width: 343px) {
-		--header-height: 120px; /** Manually match .site-header height */
+		--header-height: 120px; /** Match .site-header height. Will be updated via JS */
 	}
 }
 
