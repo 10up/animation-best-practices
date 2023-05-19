@@ -72,9 +72,9 @@ const setRootStyleProperty = (property, value) => {
 };
 
 /**
- * Set scroll position threshold
+ * Get scroll position threshold
  */
-function setScrollPositionThreshold(headerHeight) {
+function getScrollPositionThreshold(headerHeight) {
 	return headerHeight * 3;
 }
 
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let behaviorTimeout = 2000;
 		let headerHeight = getOffsetHeight(header);
 		let scrollPosition = 0;
-		let scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
+		let scrollPositionThreshold = getScrollPositionThreshold(headerHeight);
 		let scrollDistance;
 		let scrollDistanceAbs;
 		let scrollDistanceThreshold = 24;
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		/** Update style property. */
 		function setHeaderHeight() {
 			headerHeight = getOffsetHeight(header);
-			scrollPositionThreshold = setScrollPositionThreshold(headerHeight);
+			scrollPositionThreshold = getScrollPositionThreshold(headerHeight);
 			setRootStyleProperty('--header-height', headerHeight);
 		}
 
