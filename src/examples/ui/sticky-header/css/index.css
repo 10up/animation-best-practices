@@ -46,6 +46,12 @@ body {
 	scroll-margin-top: 1rem;
 }
 
+:focus {
+	outline: 5px auto Highlight;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: 0;
+}
+
 .container {
 	padding: 1rem;
 
