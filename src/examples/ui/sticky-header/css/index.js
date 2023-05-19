@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
+		const debug = true;
 		const initialHide = false;
 		let hasScrolled = false;
 		let behaviorTimeout = 1000;
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		/** Hide sticky header by adding a modifier class. */
 		function hideStickyHeader(log = '') {
-			if (log) console.log('hide', log);
+			if (debug && log) { console.log('hide:', log); }
 
 			if (header.matches(':hover')) {
 				/** Reset scroll direction for next update. */
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		/** Show sticky header by removing a modifier class. */
 		function showStickyHeader(log = '') {
-			if (log) console.log('show', log);
+			if (debug && log) { console.log('show:', log); }
 
 			header.classList.remove('site-header--hide');
 		}
