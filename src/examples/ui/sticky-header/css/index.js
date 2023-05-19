@@ -131,8 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			/** Trigger sticky header hide behavior when clicking .site-content hash links. */
 			const contentHashLinks = document.querySelectorAll('.site-content a[href^="#"]');
 			contentHashLinks.forEach(element => {
-				element.addEventListener('click', () => {
-					hideStickyHeader();
+				element.addEventListener('click', (event) => {
+					if (event.target.offsetTop > scrollPositionThreshold) {
+						hideStickyHeader();
+					}
 				})
 			});
 
