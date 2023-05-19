@@ -52,6 +52,45 @@ body {
 	outline-offset: 0;
 }
 
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal !important;
+    border: 0;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+
+	&:focus {
+		clip: auto !important;
+		-webkit-clip-path: none;
+		clip-path: none;
+		height: auto;
+		width: auto;
+	}
+}
+
+.skip-link {
+	position: fixed !important;
+}
+
+.skip-link--to-content {
+	z-index: 5;
+	top: 1rem;
+	left: 1rem;
+}
+
+.button {
+	background-color: #fff;
+	border: 1px solid;
+	font-size: 14px;
+	padding: 1em;
+}
+
 .container {
 	padding: 1rem;
 
@@ -170,13 +209,6 @@ body {
 	position: fixed;
 	bottom: 2rem;
 	right: 1rem;
-
-	& > a {
-		background-color: #fff;
-		border: 1px solid;
-		font-size: 14px;
-		padding: 1em;
-	}
 }
 
 .hero {
