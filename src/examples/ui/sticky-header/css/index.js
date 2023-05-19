@@ -8,26 +8,26 @@
  * @param {*} maxWait
  * @returns
  */
-function debounce(func, wait, maxWait) {
-	let timeout;
-	let max;
-
-	return function () {
-		const functionToCall = () => {
-			func.apply(this, arguments);
-			max = null;
-		};
-
-		if (!max) {
-			max = setTimeout(functionToCall, maxWait);
-		}
-
-		if (timeout) {
-			clearTimeout(timeout);
-		}
-		timeout = setTimeout(functionToCall, wait);
-	};
-}
+// function debounce(func, wait, maxWait) {
+// 	let timeout;
+// 	let max;
+//
+// 	return function () {
+// 		const functionToCall = () => {
+// 			func.apply(this, arguments);
+// 			max = null;
+// 		};
+//
+// 		if (!max) {
+// 			max = setTimeout(functionToCall, maxWait);
+// 		}
+//
+// 		if (timeout) {
+// 			clearTimeout(timeout);
+// 		}
+// 		timeout = setTimeout(functionToCall, wait);
+// 	};
+// }
 
 /**
  * Throttle
