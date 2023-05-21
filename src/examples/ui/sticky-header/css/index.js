@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		 * Get scroll position threshold
 		 */
 		function getScrollPositionThreshold(headerHeight) {
-			return headerHeight * 3;
+			return headerHeight * 2;
 		}
 
 		/** Update style property. */
