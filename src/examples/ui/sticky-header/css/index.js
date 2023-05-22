@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
-		const debug = true;
+		const debug = false;
 		const initialHide = false;
 		let hasScrolled = false;
 		let behaviorTimeout = 1000;
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
 		if (initialHide && window.pageYOffset > scrollPositionThreshold) {
-			hideStickyHeader();
+			hideStickyHeader('initial');
 		}
 
 		/** Trigger sticky header hide behavior when clicking .site-content hash links. */
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				/** Is target position below the scroll position threshold? Hide the sticky header. */
 				if (target.offsetTop > window.pageYOffset) {
 					if (event.target.offsetTop > scrollPositionThreshold && target.offsetTop > scrollPositionThreshold) {
-						hideStickyHeader();
+						hideStickyHeader('below');
 					}
 				}
 			})
@@ -186,18 +186,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 						/** Are we scrolling up? Show the sticky header. */
 						if (scrollDirection === -1) {
-							showStickyHeader();
+							showStickyHeader('up ' + scrollDirection);
 						}
 
 						/** Are we scrolling down? Hide the sticky header. */
 						if (scrollDirection === 1) {
-							hideStickyHeader();
+							hideStickyHeader('down ' + scrollDirection);
 						}
 					}
 				}
 			} else {
 				/** Are we at the top of the page? Show the sticky header. */
-				showStickyHeader();
+				showStickyHeader('top');
 			}
 
 			/** Update scroll position. */
