@@ -143,14 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			element.addEventListener('click', (event) => {
 				const target = document.querySelector(event.target.hash);
 
-				/** Is target position below the scroll position threshold? Hide the sticky header. */
-				if (target.offsetTop > scrollPositionThreshold && target.offsetTop > window.pageYOffset) {
-					hideStickyHeader();
-				}
-
 				/** Is target position above the current scroll position? Show the sticky header. */
 				if (target.offsetTop < window.pageYOffset) {
-					showStickyHeader();
+					showStickyHeader('above');
+				}
+
+				/** Is target position below the scroll position threshold? Hide the sticky header. */
+				if (target.offsetTop > window.pageYOffset) {
+					if (event.target.offsetTop > scrollPositionThreshold && target.offsetTop > scrollPositionThreshold) {
+						hideStickyHeader();
+					}
 				}
 			})
 		});
