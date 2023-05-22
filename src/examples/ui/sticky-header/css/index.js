@@ -120,10 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		function hideStickyHeader(log = '') {
 			if (debug && log) { console.log('hide:', log); }
 
-			if (header.matches(':hover')) {
-				/** Reset scroll direction for next update. */
-				scrollDirectionCurrent = 0;
-			} else {
+			if (!header.matches(':hover')) {
 				header.classList.add('site-header--hide');
 			}
 		}
