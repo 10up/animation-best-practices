@@ -16,6 +16,10 @@ body {
 html {
 	scroll-behavior: smooth;
 
+	@media (prefers-reduced-motion) {
+		scroll-behavior: auto;
+	}
+
 	&::before {
 		background-image: linear-gradient(to bottom, #eee 0% 50%, #333 50%);  /** Match .site-header background-color and .site-footer background-color */
 		background-repeat: no-repeat;
