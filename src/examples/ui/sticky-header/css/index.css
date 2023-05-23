@@ -173,19 +173,12 @@ body {
 	margin: 0;
 }
 
-.header-menu {
-
-	& h1 {
-		display: none;
-	}
-
-	& ul {
-		list-style: none;
-		display: flex;
-		gap: 1em;
-		margin: 0;
-		padding: 0;
-	}
+.header-menu__list {
+	list-style: none;
+	display: flex;
+	gap: 1em;
+	margin: 0;
+	padding: 0;
 }
 
 .site-content {
