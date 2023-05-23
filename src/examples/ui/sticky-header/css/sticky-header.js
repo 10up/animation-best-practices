@@ -14,7 +14,7 @@ function getOffsetHeight(element) {
  * Get scroll position threshold
  */
 function getScrollPositionThreshold(headerHeight) {
-	return headerHeight * 2;
+	return 2 * headerHeight;
 }
 
 /**
