@@ -55,9 +55,8 @@ body {
 }
 
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	word-wrap: normal !important;
 	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
 	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	height: 1px;
@@ -66,6 +65,7 @@ body {
 	padding: 0;
 	position: absolute !important;
 	width: 1px;
+	word-wrap: normal !important;
 
 	&:focus {
 		clip: auto !important;
