@@ -1,5 +1,3 @@
-@import "@10up/component-accordion";
-
 :root {
 	--header-height: 80px; /** Match .site-header-height. Will be updated via JS */
 	--sticky-header-hide-offset: 6px;
