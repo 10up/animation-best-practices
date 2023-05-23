@@ -81,6 +81,14 @@ function init() {
 		element.addEventListener('click', (event) => {
 			const target = document.querySelector(event.target.hash);
 
+			if (!target) {
+				return;
+			}
+
+			// if (window.innerHeight < (getOffsetHeight(document.querySelector('.site')) + scrollPositionThreshold)) {
+			// 	return;
+			// }
+
 			/** Is target position above the current scroll position? Show the sticky header. */
 			if (target.offsetTop < window.pageYOffset) {
 				showStickyHeader('above');
