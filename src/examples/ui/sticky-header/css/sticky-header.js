@@ -79,27 +79,35 @@ function init() {
 	const hashLinks = document.querySelectorAll('a[href^="#"]');
 	hashLinks.forEach(element => {
 		element.addEventListener('click', (event) => {
+			event.preventDefault();
 			const target = document.querySelector(event.target.hash);
 
 			if (!target) {
 				return;
 			}
 
-			// if (window.innerHeight < (getOffsetHeight(document.querySelector('.site')) + scrollPositionThreshold)) {
-			// 	return;
-			// }
-
 			/** Is target position above the current scroll position? Show the sticky header. */
 			if (target.offsetTop < window.pageYOffset) {
 				showStickyHeader('above');
 			}
 
-			/** Is target position below the scroll position threshold? Hide the sticky header. */
+			/** Is target position below the scroll position threshold? */
 			if (target.offsetTop > window.pageYOffset) {
-				if (event.target.offsetTop > scrollPositionThreshold && target.offsetTop > scrollPositionThreshold) {
-					hideStickyHeader('below');
+				const html = document.documentElement;
+				const body = document.body;
+				const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+				/** Is the document long enough to scroll? */
+				if (window.innerHeight < documentHeight - scrollPositionThreshold) {
+
+					/** Is the target offset below the scroll position threshold? Hide the sticky header. */
+					if (target.offsetTop > scrollPositionThreshold) {
+						hideStickyHeader('below');
+					}
 				}
 			}
+
+			window.location.hash = event.target.hash;
 		})
 	});
 
