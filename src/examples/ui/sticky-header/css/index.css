@@ -48,12 +48,6 @@ body {
 	scroll-margin-top: 1rem;
 }
 
-:focus {
-	outline: 5px auto Highlight;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: 0;
-}
-
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
