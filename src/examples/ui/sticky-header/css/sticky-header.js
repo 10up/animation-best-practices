@@ -104,7 +104,10 @@ function init() {
 
 					/** Is the target offset below the scroll position threshold? Hide the sticky header. */
 					if (target.offsetTop > scrollPositionThreshold) {
-						hideStickyHeader('below');
+
+						if (window.pageYOffset > scrollPositionThreshold) {
+							hideStickyHeader('below');
+						}
 					}
 				}
 			}
