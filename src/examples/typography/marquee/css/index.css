@@ -15,8 +15,7 @@ button {
 	transition-timing-function: ease-in-out;
 }
 
-button:hover,
-button:focus {
+button:hover {
 	background-color: var(--color-brand-primary-900);
 	border-color: var(--color-brand-primary-900);
 }
@@ -62,4 +61,3 @@ figure {
 	  transform: translateX(calc(-100% - var(--gap)));
 	}
   }
-  
