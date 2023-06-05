@@ -13,7 +13,7 @@ function getOffsetHeight(element) {
 /**
  * Get scroll position threshold
  */
-function getScrollPositionThreshold(headerHeight) {
+function calculateScrollPositionThreshold(headerHeight) {
 	return 2 * headerHeight;
 }
 
@@ -49,7 +49,7 @@ function init() {
 	let behaviorTimeout = 1000;
 	let headerHeight = getOffsetHeight(header);
 	let scrollPosition = 0;
-	let scrollPositionThreshold = getScrollPositionThreshold(headerHeight);
+	let scrollPositionThreshold = calculateScrollPositionThreshold(headerHeight);
 	let scrollDistance;
 	let scrollDistanceAbs;
 	let scrollDistanceThreshold = 24;
@@ -57,18 +57,20 @@ function init() {
 	let scrollDirectionCurrent;
 
 	/** Set header height. */
-	function setHeaderHeight() {
+	function updateHeaderHeight() {
 		headerHeight = getOffsetHeight(header);
-		scrollPositionThreshold = getScrollPositionThreshold(headerHeight);
+		scrollPositionThreshold = calculateScrollPositionThreshold(headerHeight);
 
 		/** Update style property. */
 		document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
 	}
 
-	setHeaderHeight();
+	updateHeaderHeight();
 
 	/** Resize, recalculate header height and scroll position threshold. */
-	window.addEventListener('resize', setHeaderHeight);
+	window.addEventListener('resize', throttle(() => {
+		updateHeaderHeight();
+	}, 100));
 
 	/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
 	if (initialHide && window.pageYOffset > scrollPositionThreshold) {
