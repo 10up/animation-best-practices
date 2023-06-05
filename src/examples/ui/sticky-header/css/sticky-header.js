@@ -119,7 +119,7 @@ function init() {
 	/** Scroll, calculate sticky header hide and show behavior. */
 	document.addEventListener('scroll', throttle(() => {
 
-		/** Wait to initialize hiding behavior. (For local links on initial load.) */
+		/** Wait to initialize hiding behavior. (For intial scroll and deep links with fragment.) */
 		if (!hasScrolled) {
 			setTimeout(() => {
 				hasScrolled = true;
@@ -145,18 +145,18 @@ function init() {
 
 					/** Are we scrolling up? Show the sticky header. */
 					if (scrollDirection === -1) {
-						showStickyHeader('up ' + scrollDirection);
+						showStickyHeader(`up ${scrollDirection}`);
 					}
 
 					/** Are we scrolling down? Hide the sticky header. */
 					if (scrollDirection === 1) {
-						hideStickyHeader('down ' + scrollDirection);
+						hideStickyHeader(`down ${scrollDirection}`);
 					}
 				}
 			}
 		} else {
-			/** Are we at the top of the page? Show the sticky header. */
-			showStickyHeader('top');
+			/** Are we within the threshold at the top of the page? Show the sticky header. */
+			showStickyHeader('within threshold');
 		}
 
 		/** Update scroll position. */
