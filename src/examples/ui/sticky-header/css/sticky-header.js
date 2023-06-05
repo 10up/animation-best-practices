@@ -81,7 +81,6 @@ function init() {
 	const hashLinks = document.querySelectorAll('a[href^="#"]');
 	hashLinks.forEach(element => {
 		element.addEventListener('click', (event) => {
-			event.preventDefault();
 			const target = document.querySelector(event.target.hash);
 
 			if (!target) {
@@ -111,8 +110,6 @@ function init() {
 					}
 				}
 			}
-
-			window.location.hash = event.target.hash;
 		})
 	});
 
