@@ -1,4 +1,4 @@
-import throttle from '../../../../assets/js/throttle.js';
+import throttle from '@scripts/throttle.js';
 
 const debug = false;
 const header = document.querySelector('.site-header');

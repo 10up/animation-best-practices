@@ -18,8 +18,9 @@ examples.forEach(({path}) => {
     entries[key] = value;
 })
 
-// Use the alias instead of a relative path like '../../../../assets/css/'
-toolkitConfig.resolve.alias['@styles'] = path.join(__dirname, 'src/assets/css/')
+// Use the alias instead of a relative path like '../../../../assets/*'
+toolkitConfig.resolve.alias['@scripts'] = path.join(__dirname, 'src/assets/js')
+toolkitConfig.resolve.alias['@styles'] = path.join(__dirname, 'src/assets/css')
 
 const config = {
     ...toolkitConfig,
