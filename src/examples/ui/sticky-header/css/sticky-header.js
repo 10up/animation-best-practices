@@ -133,6 +133,8 @@ function init() {
 
 			/** Have we scrolled below the scroll distance threshold? Hide or show the header. */
 			if (scrollDistanceAbs > scrollDistanceThreshold) {
+
+				/** Update scroll direction. */
 				scrollDirection = Math.sign(scrollDistance);
 
 				/** Have we changed scroll direction? */
