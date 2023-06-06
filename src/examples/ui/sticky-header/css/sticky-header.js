@@ -99,7 +99,7 @@ function init() {
 				if (target.offsetTop > window.pageYOffset) {
 					const html = document.documentElement;
 					const body = document.body;
-					const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+					const documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 					/** Is the document long enough to scroll? */
 					if (window.innerHeight < documentHeight - scrollPositionThreshold) {
