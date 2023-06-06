@@ -125,10 +125,13 @@ function init() {
 			return;
 		}
 
+		/** Set scroll distance */
 		scrollDistance = window.pageYOffset - scrollPosition;
 
-		/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
+		/** Have we scrolled below the scroll position threshold? */
 		if (window.pageYOffset > scrollPositionThreshold) {
+
+			/** Set scroll distance (absolute value) */
 			scrollDistanceAbs = Math.abs(scrollDistance);
 
 			/** Have we scrolled below the scroll distance threshold? Hide or show the header. */
