@@ -92,19 +92,20 @@ function init() {
 				showStickyHeader('above');
 			}
 
-			/** Is target position below the scroll position threshold? */
-			if (target.offsetTop > window.pageYOffset) {
-				const html = document.documentElement;
-				const body = document.body;
-				const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+			/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
+			if (window.pageYOffset > scrollPositionThreshold) {
 
-				/** Is the document long enough to scroll? */
-				if (window.innerHeight < documentHeight - scrollPositionThreshold) {
+				/** Is target position below the scroll position threshold? */
+				if (target.offsetTop > window.pageYOffset) {
+					const html = document.documentElement;
+					const body = document.body;
+					const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-					/** Is the target offset below the scroll position threshold? Hide the sticky header. */
-					if (target.offsetTop > scrollPositionThreshold) {
+					/** Is the document long enough to scroll? */
+					if (window.innerHeight < documentHeight - scrollPositionThreshold) {
 
-						if (window.pageYOffset > scrollPositionThreshold) {
+						/** Is the target offset below the scroll position threshold? Hide the sticky header. */
+						if (target.offsetTop > scrollPositionThreshold) {
 							hideStickyHeader('below');
 						}
 					}
