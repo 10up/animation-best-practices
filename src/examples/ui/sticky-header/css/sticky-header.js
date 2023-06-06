@@ -1,6 +1,5 @@
 import throttle from '@scripts/throttle.js';
 
-const debug = false;
 const header = document.querySelector('.site-header');
 
 /**
@@ -20,9 +19,7 @@ function calculateScrollPositionThreshold(headerHeight) {
 /**
  * Hide sticky header by adding a modifier class.
  */
-function hideStickyHeader(log = '') {
-	if (debug && log) { console.log('hide:', log); }
-
+function hideStickyHeader() {
 	if (!header.matches(':hover')) {
 		header.classList.add('site-header--hide');
 	}
@@ -31,9 +28,7 @@ function hideStickyHeader(log = '') {
 /**
  * Show sticky header by removing a modifier class.
  */
-function showStickyHeader(log = '') {
-	if (debug && log) { console.log('show:', log); }
-
+function showStickyHeader() {
 	header.classList.remove('site-header--hide');
 }
 
@@ -74,7 +69,7 @@ function init() {
 
 	/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
 	if (initialHide && window.pageYOffset > scrollPositionThreshold) {
-		hideStickyHeader('initial');
+		hideStickyHeader();
 	}
 
 	/** Trigger sticky header hide behavior when clicking .site-content hash links. */
@@ -89,7 +84,7 @@ function init() {
 
 			/** Is target position above the current scroll position? Show the sticky header. */
 			if (target.offsetTop < window.pageYOffset) {
-				showStickyHeader('above');
+				showStickyHeader();
 			}
 
 			/** Have we scrolled below the scroll position threshold? Hide the sticky header. */
@@ -106,7 +101,7 @@ function init() {
 
 						/** Is the document long enough to scroll? Hide the sticky header. */
 						if (window.innerHeight < documentHeight - scrollPositionThreshold) {
-							hideStickyHeader('below');
+							hideStickyHeader();
 						}
 					}
 				}
@@ -148,18 +143,18 @@ function init() {
 
 					/** Are we scrolling up? Show the sticky header. */
 					if (scrollDirection === -1) {
-						showStickyHeader(`up ${scrollDirection}`);
+						showStickyHeader();
 					}
 
 					/** Are we scrolling down? Hide the sticky header. */
 					if (scrollDirection === 1) {
-						hideStickyHeader(`down ${scrollDirection}`);
+						hideStickyHeader();
 					}
 				}
 			}
 		} else {
 			/** Are we within the threshold at the top of the page? Show the sticky header. */
-			showStickyHeader('within threshold');
+			showStickyHeader();
 		}
 
 		/** Update scroll position. */
