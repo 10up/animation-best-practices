@@ -1,7 +1,7 @@
 :root {
 	--header-height: 160px; /** Match .site-header-height. Initial value, will be updated by JS */
-	--sticky-header-hide-peek: 6px;
-	--scroll-margin-top-offset: calc(1rem + var(--sticky-header-hide-peek));
+	--sticky-header-peek: 6px;
+	--scroll-margin-top: calc(1rem + var(--sticky-header-peek));
 
 	@media (min-width: 335px) {
 		--header-height: 120px; /** Match .site-header height. Initial value, will be updated by JS */
@@ -114,13 +114,13 @@ h3 {
 	& + .site-content {
 
 		& :target {
-			scroll-margin-top: calc(var(--scroll-margin-top-offset) + var(--header-height));
+			scroll-margin-top: calc(var(--scroll-margin-top) + var(--header-height));
 		}
 	}
 }
 
 .site-header--hide {
-	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-peek))));
+	transform: translateY(calc(-1 * (100% - var(--sticky-header-peek))));
 	transition: transform 0.4s ease-in-out;
 
 	&:hover,
