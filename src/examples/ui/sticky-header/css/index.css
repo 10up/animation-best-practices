@@ -1,14 +1,14 @@
 :root {
-	--header-height: 160px; /** Match .site-header-height. Initial value, will be updated by JS */
+	--sticky-header-height: 160px; /** Match .site-header height. Initial value, will be updated by JS */
 	--sticky-header-peek: 6px;
 	--scroll-margin-top: calc(1rem + var(--sticky-header-peek));
 
 	@media (min-width: 335px) {
-		--header-height: 120px; /** Match .site-header height. Initial value, will be updated by JS */
+		--sticky-header-height: 120px; /** Match .site-header height. Initial value, will be updated by JS */
 	}
 
 	@media (min-width: 420px) {
-		--header-height: 80px; /** Match .site-header height. Initial value, will be updated by JS */
+		--sticky-header-height: 80px; /** Match .site-header height. Initial value, will be updated by JS */
 	}
 }
 
@@ -114,7 +114,7 @@ h3 {
 	& + .site-content {
 
 		& :target {
-			scroll-margin-top: calc(var(--scroll-margin-top) + var(--header-height));
+			scroll-margin-top: calc(var(--scroll-margin-top) + var(--sticky-header-height));
 		}
 	}
 }

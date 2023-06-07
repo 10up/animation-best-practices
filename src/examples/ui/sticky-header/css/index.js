@@ -36,7 +36,7 @@ function updateHeaderHeight() {
 	scrollPositionThreshold = (2 * headerHeight); /** Minimum 1 * headerHeight */
 
 	/** Update style property. */
-	document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+	document.documentElement.style.setProperty('--sticky-header-height', `${headerHeight}px`);
 }
 
 function init() {
