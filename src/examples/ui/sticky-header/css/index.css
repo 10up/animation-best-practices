@@ -1,10 +1,14 @@
 :root {
-	--header-height: 80px; /** Match .site-header-height. Will be updated via JS */
-	--sticky-header-hide-offset: 6px;
-	--scroll-margin-top-offset: calc(1rem + var(--sticky-header-hide-offset));
+	--header-height: 160px; /** Match .site-header-height. Initial value, will be updated by JS */
+	--sticky-header-hide-peek: 6px;
+	--scroll-margin-top-offset: calc(1rem + var(--sticky-header-hide-peek));
 
-	@media (max-width: 343px) {
-		--header-height: 120px; /** Match .site-header height. Will be updated via JS */
+	@media (min-width: 335px) {
+		--header-height: 120px; /** Match .site-header height. Initial value, will be updated by JS */
+	}
+
+	@media (min-width: 420px) {
+		--header-height: 80px; /** Match .site-header height. Initial value, will be updated by JS */
 	}
 }
 
@@ -20,8 +24,9 @@ html {
 		scroll-behavior: auto;
 	}
 
+	/** Overscroll Background */
 	&::before {
-		background-image: linear-gradient(to bottom, #eee 0% 50%, #333 50%);  /** Match .site-header background-color and .site-footer background-color */
+		background-image: linear-gradient(to bottom, #eee 0% 50%, #333 50%); /** Match .site-header background-color and .site-footer background-color */
 		background-repeat: no-repeat;
 		background-size: 100%;
 		content: "";
@@ -34,6 +39,12 @@ html {
 
 body {
 	min-width: 320px;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 3rem;
 }
 
 :first-child {
@@ -67,13 +78,12 @@ body {
 }
 
 .container {
-	padding: 1rem;
 
 	& > * {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 100%;
-		width: 720px;
+		max-width: 720px;
+		width: calc(100% - 2 * 24px);
 	}
 }
 
@@ -90,6 +100,8 @@ body {
 	background-color: #eee;
 	box-shadow: 0 1px #ddd;
 	flex-shrink: 0;
+	padding-bottom: 16px;
+	padding-top: 16px;
 	transition: transform 0.2s ease-in-out;
 }
 
@@ -102,34 +114,20 @@ body {
 	& + .site-content {
 
 		& :target {
-			scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
+			scroll-margin-top: calc(var(--scroll-margin-top-offset) + var(--header-height));
 		}
 	}
 }
 
 .site-header--hide {
-	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-offset))));
+	transform: translateY(calc(-1 * (100% - var(--sticky-header-hide-peek))));
 	transition: transform 0.4s ease-in-out;
-
-	& + .site-content {
-
-		& :target {
-			scroll-margin-top: var(--scroll-margin-top-offset);
-		}
-	}
 
 	&:hover,
 	&:focus,
 	&:focus-within {
 		transform: translateY(0);
 		transition: transform 0.2s ease-in-out;
-
-		& + .site-content {
-
-			& :target {
-				scroll-margin-top: calc(var(--header-height) + var(--scroll-margin-top-offset));
-			}
-		}
 	}
 }
 
@@ -147,6 +145,7 @@ body {
 
 .header-menu__list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1em;
 	list-style: none;
 	margin: 0;
@@ -182,9 +181,10 @@ body {
 
 .hero {
 	background-color: #ddd;
-	margin: -2rem -1rem 2rem;
+	margin-bottom: 2rem;
+	margin-top: -2rem;
 	max-width: none;
 	padding-bottom: 4rem;
 	padding-top: 4rem;
-	width: calc(100% + 1rem * 2);
+	width: 100%;
 }
