@@ -36,7 +36,6 @@
 	transition-timing-function: ease-in-out;
 }
 
-.menu a:focus,
 .menu a:hover {
 	color: var(--color-brand-primary);
 	text-decoration-color: var(--color-brand-primary);
@@ -98,7 +97,6 @@
 	font-weight: 700;
 }
 
-.navigation--primary a:focus,
 .navigation--primary a:hover {
 	color: var(--color-brand-white);
 }
