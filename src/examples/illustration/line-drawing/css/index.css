@@ -1,0 +1,57 @@
+a {
+	color: var(--color-brand-primary);
+}
+
+button {
+	appearance: none;
+	background-color: var(--color-brand-primary);
+	border: 2px solid var(--color-brand-primary);
+	border-radius: 0.25em;
+	color: var(--color-brand-white);
+	cursor: pointer;
+	padding: 0.5em;
+	transition-duration: 300ms;
+	transition-property: background-color, border-color;
+	transition-timing-function: ease-in-out;
+}
+
+button:hover {
+	background-color: var(--color-brand-primary-900);
+	border-color: var(--color-brand-primary-900);
+}
+
+figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80ch;
+	padding: 1em;
+}
+
+.illustration {
+	fill: none;
+	stroke: var(--color-brand-grayscale-500);
+	stroke-width: 2;
+}
+
+.logo > *,
+.ports > *,
+.outline > * {
+	animation: draw 5s ease alternate infinite;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+}
+
+@keyframes draw {
+	from {
+		stroke-dashoffset: 1;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
