@@ -1,0 +1,79 @@
+img {
+	background-color: var(--color-brand-grayscale-800);
+	border-radius: 0.5rem;
+	height: auto;
+	max-width: 100%;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
+}
+
+nav a {
+	background-color: var(--color-brand-grayscale-100);
+	border-radius: 0.5rem;
+	color: var(--color-brand-primary);
+	padding: 0.75em 1em;
+	text-decoration: none;
+}
+
+nav a[aria-current] {
+	background-color: var(--color-brand-grayscale-800);
+	color: var(--color-brand-white);
+}
+
+nav a:not([aria-current]):hover {
+	background-color: var(--color-brand-primary);
+	color: var(--color-brand-white);
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80ch;
+	padding: 1em;
+}
+
+.overlay {
+	align-items: center;
+	background-color: var(--color-brand-secondary-900);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	left: 0;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	will-change: transform;
+
+	&::after {
+		--width: 2rem;
+		--loader-width: 2px;
+
+		animation: spin-clockwise 1s infinite linear;
+		aspect-ratio: 1 / 1;
+		background-image: conic-gradient(transparent 50%, var(--color-brand-white));
+		border-radius: 50%;
+		content: "";
+		mask-image:
+			radial-gradient(
+				transparent calc(var(--width) / 2 - var(--loader-width) * 2),
+				white calc(var(--width) / 2 - var(--loader-width) * 2)
+			);
+		width: var(--width);
+	}
+}
+
+@keyframes spin-clockwise {
+	from {
+		rotate: 0deg;
+	}
+
+	to {
+		rotate: 360deg;
+	}
+}
